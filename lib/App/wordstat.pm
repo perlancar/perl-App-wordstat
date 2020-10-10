@@ -23,6 +23,40 @@ $SPEC{wordstat} = {
         },
         # XXX ci
     },
+    examples => [
+        {
+            args => {text=><<'_'},
+An optimistic person sees good things everywhere, is generally confident and
+hopeful of what the future holds. From the optimist's point-of-view the world is
+full of potential opportunities. The pessimist, on the other hand, observes
+mainly the negative aspects of everything around.
+
+_
+            naked_result => {
+                'avg_line_len' => '56',
+                'avg_line_with_words_len' => '70',
+                'avg_nonempty_line_len' => '70',
+                'avg_word_len' => '5.17777777777778',
+                'avg_words_per_line' => '9',
+                'avg_words_per_line_with_words' => '11.25',
+                'avg_words_per_nonempty_line' => '11.25',
+                'longest_word_len' => 13,
+                'num_chars' => 285,
+                'num_lines' => 5,
+                'num_lines_with_words' => 4,
+                'num_nonempty_lines' => 4,
+                'num_unique_words' => 36,
+                'num_words' => 45,
+                'shortest_word_len' => 1
+            },
+        },
+        {
+            summary => 'Supply text from file or stdin',
+            argv => ['file.txt'],
+            test => 0,
+            'x.doc.show_result' => 0,
+        },
+    ],
 };
 sub wordstat {
     my %args = @_;
