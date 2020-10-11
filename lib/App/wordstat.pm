@@ -138,4 +138,6 @@ See included script L<wordstat>.
 
 =head1 SEE ALSO
 
+L<freqtable> from L<App::freqtable>.
+
 =cut
